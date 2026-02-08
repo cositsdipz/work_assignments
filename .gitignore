@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But keep these folders
+!rough version/
+!final versions/
+
+Keep the .gitignore file itself
+!.gitignore
