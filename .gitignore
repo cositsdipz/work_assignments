@@ -2,7 +2,7 @@
 *
 # Keep the .gitignore file itself and the files from these two directories
 !.gitignore
-!rough version/
-!rough version/**/*
-!final versions/
-!final versions/**/*
+!rough_versions/
+!rough_versions/**/*
+!final_versions/
+!final_versions/**/*
