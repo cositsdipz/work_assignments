@@ -186,8 +186,9 @@
     \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
     % Document parameters
     % Document title
-    \title{Assignment 1 - Python Basics: Operators \& Mathematics \\ Part A}
-    \author{Deepesh Shrestha}    
+     \title{Assignment 1 - Python Basics: Operators \& Mathematics \\ Part A}
+    \author{Deepesh Shrestha}
+    
     
     
     
@@ -405,7 +406,9 @@
     \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
     
     
-
+    \usepackage{amsmath}    % align, align*, \dfrac, etc.
+    \usepackage{amssymb}    % extra math symbols (optional)
+    \usepackage{mathtools}  % fixes and enhancements for amsmath (optional)
 \begin{document}
     
     \maketitle
@@ -413,31 +416,52 @@
     
 
     
-    \subparagraph{Assignment 1}\label{assignment-1}
+    \subparagraph{Assignment 1 - A}\label{assignment-1---a}
 
 \subparagraph{Python Basics: Operators in
 Mathematics}\label{python-basics-operators-in-mathematics}
 
-    \subparagraph{\texorpdfstring{Given formula references for Part - A
-}{Given formula references for Part - A }}\label{given-formula-references-for-part---a}
+    \subparagraph{\texorpdfstring{Given formula references for Part - A}{Given formula references for Part - A}}\label{given-formula-references-for-part---a}
+\leavevmode\par\noindent
 
-\[ \small \underline{\textbf{Hyperbolic Functions:}}\]
-\[\tiny \sinh(x) = \frac{e^x - e^{-x}}{2}\]
-\[\tiny \cosh(x) = \frac{e^x + e^{-x}}{2}\]
-\[\tiny \tanh(x) = \frac{\sinh(x)}{\cosh(x)}\]
+\small\underline{\textbf{Hyperbolic Functions:}}
 
-\[ \small \underline{\textbf{Hyperbolic Identities:}}\]
-\[\tiny \cosh^2(x) - \sinh^2(x) = 1\]
-\[\tiny \cosh(2x) - 1 = 2\sinh^2(x)\]
-\[\tiny \sinh(x) + \cosh(x) = e^x\]
 
-\[ \small \underline{\textbf{Trigonometric Identities:}}\]
-\[\tiny \sin^2(x) + \cos^2(x) = 1\] \[\tiny \sec^2(x) - \tan^2(x) = 1\]
-\[\tiny \tan^2(x) + 1 = \sec^2(x)\] \[\tiny \sin(2x) = 2\sin(x)\cos(x)\]
+\begin{gather*}
+\sinh(x) = \dfrac{e^{x} - e^{-x}}{2} \\
+\cosh(x) = \dfrac{e^{x} + e^{-x}}{2} \\
+\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)}
+\end{gather*}
 
-\[ \small \underline{\textbf{Logarithm Properties:}}\]
-\[\tiny \ln(ab) = \ln(a) + \ln(b)\] \[\tiny \ln(a^n) = n \ln(a)\]
-\[\tiny \log_b(x) = \frac{\ln(x)}{\ln(b)}\]
+\small\underline{\textbf{Hyperbolic Identities:}}
+
+\begin{gather*}
+\cosh^{2}(x) - \sinh^{2}(x) = 1 \\
+\cosh(2x) - 1 = 2\sinh^{2}(x) \\
+\sinh(x) + \cosh(x) = e^{x}
+\end{gather*}
+
+
+\small\underline{\textbf{Trigonometric Identities:}}
+
+\begin{gather*}
+\sin^{2}(x) + \cos^{2}(x) = 1 \\
+\sec^{2}(x) - \tan^{2}(x) = 1 \\
+\tan^{2}(x) + 1 = \sec^{2}(x) \\
+\sin(2x) = 2\sin(x)\cos(x)
+\end{gather*}
+
+
+
+
+\small\underline{\textbf{Logarithm Properties:}}
+
+\begin{align*}
+\ln(ab) &= \ln(a) + \ln(b) \\
+\ln(a^{n}) &= n\,\ln(a) \\
+\log_{b}(x) &= \dfrac{\ln(x)}{\ln(b)}
+\end{align*}
+
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{1}{\boxspacing}
@@ -449,7 +473,9 @@ Mathematics}\label{python-basics-operators-in-mathematics}
 
     \[ \underline{\textbf{Question - 1}} \qquad (Given \ n = 3) \quad (Replacing\ x \ with \ n \ for \ convenience)\]
 
-\[ \small f(n) = \pi n^3 + \log(n) + \sqrt{n^3} + \tan(n) + e^n \]
+\[
+f(n) = \pi n^{3} + \log(n) + \sqrt{n^{3}} + \tan(n) + e^{n}
+\]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{2}{\boxspacing}
@@ -479,7 +505,8 @@ The evaluation of the function f(n) = 111.0608
 
     \[ \underline{\textbf{Question - 2}} \qquad (Given \ n = 2)\]
 
-\[ \small g(n) = \frac {e^{2n}+\cosh(n)}{\sinh(n)+\log_{10}(n)} + \sqrt[3]{n^5} - \tan^{-1}(n)
+\[
+g(n) = \frac{e^{2n} + \cosh(n)}{\sinh(n) + \log_{10}(n)} + \sqrt[3]{n^{5}} - \tan^{-1}(n)
 \]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
@@ -510,7 +537,9 @@ The evaluation of the function g(n) = 16.9256
 
     \[ \underline{\textbf{Question - 3}}\qquad \left(Given \ n = \frac{\pi}{4}\right)\]
 
-\[ \small h(n) = \sin(2n) \cdot \cos(n) + \frac{\tan(n)}{\cot(n)} + e^{\sin(n)} + \ln(\cos(n)) + n^{\pi} \]
+\[
+h(n) = \sin(2n)\,\cos(n) + \frac{\tan(n)}{\cot(n)} + e^{\sin(n)} + \ln(\cos(n)) + n^{\pi}
+\]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{4}{\boxspacing}
@@ -540,9 +569,9 @@ The evaluation of the function h(n) = 3.8568
 
     \[ \underline{\textbf{Question - 4}} \qquad (Given \ n = 1.5)\]
 
-\[ \small p(n) = \sqrt{e^n + \sinh(2n)} + \frac {\ln(n^2 + 1)}{\tanh(n)} + n^n - \cos^{-1}\!\left(\frac {n}{2}\right) + \cosh^2(n)
+\[
+p(n) = \sqrt{e^{n} + \sinh(2n)} + \frac{\ln(n^{2} + 1)}{\tanh(n)} + n^{n} - \cos^{-1}\!\!\left(\frac{n}{2}\right) + \cosh^{2}(n)
 \]
-
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{5}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -553,7 +582,7 @@ The evaluation of the function h(n) = 3.8568
 \PY{n}{pn} \PY{o}{=} \PY{p}{(}
     \PY{n}{m}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{n}\PY{p}{)} \PY{o}{+} \PY{n}{m}\PY{o}{.}\PY{n}{sinh}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{n}\PY{p}{)}\PY{p}{)}
     \PY{o}{+} \PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{n}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{sinh}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{o}{/}\PY{n}{m}\PY{o}{.}\PY{n}{cosh}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{)}  \PY{c+c1}{\PYZsh{} tanh(n) = sinh(n)/cosh(n)}
-    \PY{o}{+} \PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{n}\PY{o}{*}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{)}                              \PY{c+c1}{\PYZsh{} nⁿ = e\PYZca{}(n.ln(n))}
+\PY{o}{+} \PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{n}\PY{o}{*}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{)}                              \PY{c+c1}{\PYZsh{} n**n = e**(n*ln(n))}
     \PY{o}{\PYZhy{}} \PY{n}{m}\PY{o}{.}\PY{n}{acos}\PY{p}{(}\PY{n}{n}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}
     \PY{o}{+} \PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{cosh}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
 \PY{p}{)}
@@ -571,8 +600,8 @@ The evaluation of the function p(n) = 11.7582
 
     \[ \underline{\textbf{Question - 5}} \qquad (Given \ n = 0.5)\]
 
-\[ \small q(n) = \frac {\pi^n \cdot e^{2x}}{\sqrt{\sinh(n)+\cosh(n)}} + 
-\log_2(n+1) \cdot \tan\left(\frac{\pi n}{6}\right) + \sqrt[4]{n^7} - \sin^{-1}(n)
+\[
+q(n) = \frac{\pi^{n}\, e^{2n}}{\sqrt{\sinh(n) + \cosh(n)}} + \log_{2}(n+1)\,\tan\!\left(\frac{\pi n}{6}\right) + \sqrt[4]{n^{7}} - \sin^{-1}(n)
 \]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
@@ -583,9 +612,9 @@ The evaluation of the function p(n) = 11.7582
 
 \PY{c+c1}{\PYZsh{} Computing q(n):}
 \PY{n}{qn} \PY{o}{=} \PY{p}{(}
-    \PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{n}{n}\PY{p}{)} \PY{o}{*} \PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{n}\PY{p}{)} \PY{o}{/} \PY{n}{m}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{)}   \PY{c+c1}{\PYZsh{} sinh(n) + cosh(n) = eⁿ}
-    \PY{c+c1}{\PYZsh{} + m.log((n+1),2)*m.tan(m.pi*n/6)         \PYZsh{} log₂(n) = m.log2(n) = m.log(n,2)}
-    \PY{o}{+} \PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{n}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{m}\PY{o}{.}\PY{n}{tan}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{n}{n}\PY{o}{/}\PY{l+m+mi}{6}\PY{p}{)}        \PY{c+c1}{\PYZsh{} log₂(y) = ln(y)/ln(2)}
+\PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{n}{n}\PY{p}{)} \PY{o}{*} \PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{n}\PY{p}{)} \PY{o}{/} \PY{n}{m}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{)}   \PY{c+c1}{\PYZsh{} sinh(n) + cosh(n) = e^n}
+\PY{c+c1}{\PYZsh{} + m.log((n+1),2)*m.tan(m.pi*n/6)         \PYZsh{} log2(n) = m.log2(n) = m.log(n,2)}
+  \PY{o}{+} \PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{n}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{n}{m}\PY{o}{.}\PY{n}{tan}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{n}{n}\PY{o}{/}\PY{l+m+mi}{6}\PY{p}{)}        \PY{c+c1}{\PYZsh{} log2(y) = ln(y)/ln(2)}
     \PY{o}{+} \PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{n}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{4}\PY{p}{)}
     \PY{o}{\PYZhy{}} \PY{n}{m}\PY{o}{.}\PY{n}{asin}\PY{p}{(}\PY{n}{n}\PY{p}{)}
 \PY{p}{)}
@@ -603,10 +632,9 @@ The evaluation of the function q(n) = 3.6827
 
     \[ \underline{\textbf{Question - 6}} \qquad (Given \ n = 2.5)\]
 
-\[ \small r(n) = (e^n + e^{-n})^2 - 4\sinh^2(n) + \frac{\ln(n!)}{\sqrt{n}} +
-\cos(n) \cdot \sec(n) + \tanh^{-1}\!\left(\frac{n-2}{n}\right)
+\[
+r(n) = (e^{n} + e^{-n})^{2} - 4\sinh^{2}(n) + \frac{\ln(n!)}{\sqrt{n}} + \cos(n)\,\sec(n) + \tanh^{-1}\!\!\left(\frac{n-2}{n}\right)
 \]
-
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{7}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -646,9 +674,9 @@ The evaluation of the function r(n) = 5.0704
 \PY{n}{n} \PY{o}{=} \PY{l+m+mf}{2.5}
 
 \PY{n}{rn} \PY{o}{=} \PY{p}{(}
-    \PY{c+c1}{\PYZsh{} (eⁿ + e⁻ⁿ)/2 = cosh(n), Hence, (eⁿ + e⁻ⁿ) = 2cosh(n), }
+\PY{c+c1}{\PYZsh{} (e^n + e^-n)/2 = cosh(n), Hence, (e^n + e^-n) = 2*cosh(n)}
     \PY{c+c1}{\PYZsh{} squaring both sides, we get,}
-    \PY{c+c1}{\PYZsh{} (eⁿ + e⁻ⁿ)² = 4cosh²(n)}
+\PY{c+c1}{\PYZsh{} (e^n + e^-n)^2 = 4*cosh^2(n)}
     \PY{l+m+mi}{4}\PY{o}{*}\PY{n}{m}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{cosh}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}  
     \PY{o}{\PYZhy{}} \PY{l+m+mi}{4}\PY{o}{*}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{sinh}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}  
     \PY{o}{+} \PY{p}{(}\PY{n}{n}\PY{o}{*}\PY{n}{m}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{n}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{n}\PY{p}{)} \PY{o}{/} \PY{n}{m}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{n}\PY{p}{)}
@@ -669,8 +697,8 @@ The evaluation of the function r(n) = 5.0704
 
     \[ \underline{\textbf{Question - 7}} \qquad \left(Given \ n =\frac{\pi}{6} \right)\]
 
-\[ \small s(n) = \frac {\sin^3(n)+\cos^3(n)}{\sin(n)+\cos(n)} + e^{\tan(n)} - 
-\ln\!\left(\frac{1}{\csc(n)}\right) + \sinh(n) \cdot \operatorname{csch}(n)+ \sqrt{\pi n^2}
+\[
+s(n) = \frac{\sin^{3}(n) + \cos^{3}(n)}{\sin(n) + \cos(n)} + e^{\tan(n)} - \ln\!\left(\frac{1}{\csc(n)}\right) + \sinh(n)\,\operatorname{csch}(n) + \sqrt{\pi n^{2}}
 \]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
@@ -705,9 +733,8 @@ The evaluation of the function s(n) = 4.9695
 
     \[ \underline{\textbf{Question - 8}} \qquad (Given \ n = 1)\]
 
-\[ \small t(n) = \sqrt[3]{e^{3n}+\pi^n} + \frac{\cosh(2n)-1}{\sinh^2(n)} +
-\ln \left(\tan \left(\frac{\pi}{4} + \frac{n}{2}\right)\right) + n^{\pi} -
-\cos^{-1}\!\left(\frac{1}{e}\right)
+\[
+t(n) = \sqrt[3]{e^{3n} + \pi^{n}} + \frac{\cosh(2n) - 1}{\sinh^{2}(n)} + \ln\!\left(\tan\!\left(\frac{\pi}{4} + \frac{n}{2}\right)\right) + n^{\pi} - \cos^{-1}\!\!\left(\frac{1}{e}\right)
 \]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
@@ -738,8 +765,8 @@ The evaluation of the function t(n) = 5.8853
 
     \[ \underline{\textbf{Question - 9}} \qquad (Given \ n = 0.8)\]
 
-\[ \small u(n) = e^{n^2} \cdot \sin(\pi n) + \frac{\ln(1+n^2)}{\tanh(2n)} +
-\sqrt{\cosh^2(n)-\sinh^2(n)} + \tan^{-1}(e^n) - \frac{\pi^2 n}{e^n}
+\[
+u(n) = e^{n^{2}}\,\sin(\pi n) + \frac{\ln(1+n^{2})}{\tanh(2n)} + \sqrt{\cosh^{2}(n) - \sinh^{2}(n)} + \tan^{-1}(e^{n}) - \frac{\pi^{2} n}{e^{n}}
 \]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
@@ -770,8 +797,8 @@ The evaluation of the function u(n) = 0.2522
 
     \[ \underline{\textbf{Question - 10}} \qquad \left(Given \ n = \frac{\pi}{3}\right)\]
 
-\[ \tiny v(n) = \frac{e^{\sin(n)}+e^{\cos(n)}}{2} + \ln(\sin(n)+\cos(n)) +
-\sqrt{\tan^2(n)+1} + \sin^{-1}(n) - \cosh\left(\frac{n}{2}\right) + \frac{\pi n^2}{e} + \sec^2(n) - \tan^2(n)
+\[
+v(n) = \frac{e^{\sin(n)} + e^{\cos(n)}}{2} + \ln(\sin(n) + \cos(n)) + \sqrt{\tan^{2}(n) + 1} + \sin^{-1}(n) - \cosh\!\left(\frac{n}{2}\right) + \frac{\pi n^{2}}{e} + \sec^{2}(n) - \tan^{2}(n)
 \]
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
