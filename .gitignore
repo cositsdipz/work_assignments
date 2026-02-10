@@ -1,8 +1,22 @@
 # Ignore everything
 *
-# Keep the .gitignore file itself and the files from these two directories
+
+# Ignore Jupyter checkpoints everywhere
+.ipynb_checkpoints/
+
+# Keep the .gitignore file itself 
 !.gitignore
+
+# Unignore folders
 !rough_versions/
-!rough_versions/**/*
 !final_versions/
-!final_versions/**/*
+
+# Unignore ONLY .ipynb files recursively (skips checkpoints)
+!rough_versions/**/*.ipynb
+!final_versions/**/*.ipynb
+
+# Unignore .pdf, .tex files
+!rough_versions/**/*.pdf
+!final_versions/**/*.pdf
+!rough_versions/**/*.tex
+!final_versions/**/*.tex
